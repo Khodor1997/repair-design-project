@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@black:#000;
+@gold:#E3B873;
+@white:#fff;
+
+@font-face {
+    font-family: 'FuturaDemiC';
+    src: url('../assets/fonts/FuturaDemiC.eot');
+    src: url('../assets/fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/FuturaDemiC.woff2') format('woff2'),
+        url('../assets/fonts/FuturaDemiC.woff') format('woff'),
+        url('../assets/fonts/FuturaDemiC.ttf') format('truetype'),
+        url('../assets/fonts/FuturaDemiC.svg#FuturaDemiC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('../assets/fonts/FuturaBookC.eot');
+    src: url('../assets/fonts/FuturaBookC.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/FuturaBookC.woff2') format('woff2'),
+        url('../assets/fonts/FuturaBookC.woff') format('woff'),
+        url('../assets/fonts/FuturaBookC.ttf') format('truetype'),
+        url('../assets/fonts/FuturaBookC.svg#FuturaBookC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yeseva One';
+    src: url('../assets/fonts/YesevaOne.eot');
+    src: url('../assets/fonts/YesevaOne.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/YesevaOne.woff2') format('woff2'),
+        url('../assets/fonts/YesevaOne.woff') format('woff'),
+        url('../assets/fonts/YesevaOne.ttf') format('truetype'),
+        url('../assets/fonts/YesevaOne.svg#YesevaOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-size: 16px;
+}
+.wrapper{
+    width: 100%;
+    background: #000;
+}
+
+.header{
+    width: 100%; 
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #000;
+}
+.main{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    }
+.container-header{
+    max-width: 1440px;
+    height: 5.1875rem;
+    margin: 0rem  4rem 0rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-company h1{
+    margin-right: 2rem;
+    color: @gold;
+    display: flex;
+     font-size:0.875rem;
+    text-transform: uppercase;
+    font-family: 'FuturaDemiC';
+}
+.menu-header{
+    display: flex;
+    width: 40.3%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    &__item{
+        margin-right: 3.2375rem;        
+        text-transform: uppercase;
+        font-size:0.875rem;
+        font-family: 'FuturaBookC';
+        &:last-child{
+             margin-right: 0;
+            }   
+        }
+        &__link {    
+            text-decoration: none;
+            color: @white;   
+            &:hover{
+                color: @gold;
+                }
+            &_selected{
+                 text-decoration: none;
+                color: @gold;
+                }
+            &_number{
+                color: @gold;               
+                }
+            }      
+        }
+.menu-button{
+    width: 10.0625rem;
+    height: 2.3125rem;
+    font-family: 'FuturaDemiC';
+    color: @white;
+    background: @gold;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    }
+    
+.repair{ 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    }
+.sidebar{
+    position: relative;
+    width: 5%;
+    height: 44.1875rem;
+    background: @black;
+    &__link{
+        width:11rem;
+        position: absolute;
+        margin-top: 17rem;
+        transform: rotate(90deg);
+        &_inst{
+            margin-top: 6.5rem;
+            display: inline-block;
+            text-transform: uppercase;
+            color: @gold;
+            text-decoration: none;
+            font-family: 'FuturaDemiC';
+            &::after{
+                content: ' ';
+                width: 3.1875rem;
+                height: 0.0625rem;
+                background: @gold;
+                display: inline-block;
+                margin-left: 1rem;
+                vertical-align: middle;
+                }
+            }
+        }
+    }
+.overley-bg{
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    z-index: 1;
+    }
+.offer{
+    position: relative;
+    width: 94.5%;
+    height: 44.1875rem;;
+    background: url(../assets/img/offer-bg.jpg);
+    background-size: cover;
+    &-info{
+        margin-top: 12.625rem;
+        margin-left: 3.8125rem;
+        position: relative;
+        z-index: 2;
+        &__header{
+            font-family: 'Yeseva One';
+            font-size: 2.5rem;
+            color:@white;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: normal;
+            &_gold{
+                color:@gold;
+                }
+            }
+        &__discount{
+            margin-top: 1.1rem;
+            margin-bottom:3.1875rem; 
+            font-weight: 100;
+            line-height: 1.875rem;
+            font-size: 1.375rem;
+            color:@white;
+            font-family: 'FuturaBookC';
+            }
+        .button{
+            width: 12.9375rem;
+            height: 3.1875rem;
+            font-size: 0.9rem;
+            font-family: 'FuturaDemiC';
+            text-transform: uppercase;
+            background: #E3B873;
+            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+            border-radius: 2px;
+            border: none;
+            margin-right: 1.7rem;
+            color: @white;
+            cursor:pointer;
+            &:hover{
+                border: 1px solid @white;
+                background-color: transparent;
+                }
+            }
+        }   
+    }
+.button-scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        z-index: 4;
+    position: absolute;
+    margin-top: 3rem;
+    bottom: -2rem;
+    width: 15.4375rem;
+    height: 6.0625rem;
+    background: @black;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:@white;
+    span{
+        margin-left: 1rem;
+        position: relative;
+        .button-scroll_arrow{
+            position: absolute;
+            left: 0.55rem;
+            top: 0.75rem;
+        }
+    }
+}
+
+.container-1{
+    height: 40.625rem;
+    padding-top: 2rem;
+}
+.slide-bar{
+    margin-top:4.5rem;
+    margin-left: 43%;
+    width: 57%;
+    margin-bottom: 2.8125rem;
+}
+.navigation-slider{
+    display: flex;
+    &__item{
+        margin-right: 3.8125rem;
+        list-style: none;
+    }
+    &__link{
+        font-family: 'Yeseva One';
+        font-size: 0.875rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: @white;
+        opacity: .3;
+        &_selected{
+            color: @gold;
+            opacity: 1;
+        }
+        &:hover{
+            color: @gold;
+            opacity: 1;
+        }
+    }
+} 
+
+.slider{
+    margin-left: 7%;
+    display: flex;
+    width: 100%;
+}
+    .info{
+        width: 32%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        &__label{
+        font-family:'Yeseva One';
+        font-size: 27px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        color: #E3B873;
+        &::after{
+            content: ' ';
+            width: 3.1875rem;
+            height: 0.0625rem;
+            background: @gold;
+            display: inline-block;
+            margin-left: 2rem;
+            vertical-align: middle;
+            }
+        }
+        
+        &__text{
+        font-family: 'FuturaBookC',sans-serif;
+        font-size: 18px;
+        color: #FFFFFF;
+        }
+        &__col-label{
+        font-family:'Yeseva One';
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #E3B873;
+        }
+        &__col-text{
+        font-family: 'FuturaBookC',sans-serif;
+        font-size: 15px;
+        color: #FFFFFF;
+        }
+        .col{
+        width: 50%;
+        
+        }
+    }
+    .completed-ptojects__button{
+            margin-top: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 13.125rem;
+            transi 
+            &_arrow{
+                font-size: 40px;
+                color: @white; 
+            }
+            .point{
+                cursor: pointer;
+                opacity: .3;
+                &_selected{
+                    opacity: 1;
+                }
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+.photo-project{
+    margin-left: 3.5%;
+    width: 58%;
+    position: relative;
+    &__img2{
+        position: absolute;
+        left: 90%;
+
+    }
+}  
